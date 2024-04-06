@@ -1,5 +1,1 @@
-def Silnia(liczba):
-    if liczba == 0:
-        return 1
-    else:
-        return liczba * Silnia(liczba - 1)
+Silnia = lambda liczba: 1 if liczba == 0 else liczba * Silnia(liczba - 1)
