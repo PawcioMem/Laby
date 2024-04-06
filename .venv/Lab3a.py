@@ -325,7 +325,23 @@
 
 # login = []
 # haslo = []
-
+# slownik = {}
+#
+#
+# while True:
+#     sprawdz = input("Czy chcesz zapisac jakis login? ")
+#     if sprawdz == "STOP":
+#         break
+#     else:
+#         zapisz_login = input("Podaj login: ")
+#         zapisz_haslo = input("Podaj haslo: ")
+#         login.append(zapisz_login)
+#         haslo.append(zapisz_haslo)
+#         continue
+#
+# for index, zapisz_login in enumerate(login):
+#     slownik[zapisz_login] = haslo[index]
+# print(slownik)
 
 
 # ########################## Task 10  - Module in Python
@@ -334,12 +350,40 @@
 # # #Utwórz funkcje Pion: która rysuje gwiazdeki pionowo, liczbę gwiazdek podaje użytkownik jako argument funkcji')
 # # obie funkcje są z modułu o nazwie stars
 
+# import stars
+# # LITERA E
+# stars.Poziom(5)
+# stars.Pion(1)
+# stars.Poziom(5)
+# stars.Pion(1)
+# stars.Poziom(5)
+#
+# print("")
+# print("")
+#
+# #LITERA L
+# stars.Pion(4)
+# stars.Poziom(5)
+
+
 # # Korzystając z modułu stars i funkcji Pion Poziom wypisz litery: E, L
 
 # ########################## Task 11
 # # utwórz moduł o nazwie sil, w którym znajdzie się funkcja silnia (użyj lammbda), a następnie korzystając z
 # modułu sil, oblicz symbol Newtona dla dowolnych 2 liczb wskazanych przez
 # użytkownika(http://www.fizykon.org/wzory/wzory_matem_kombinatoryka.htm)
+
+# import sil
+# liczba1 = int(input("Podaj pierwsza liczbe: "))
+# liczba2 = int(input("Podaj druga liczbe: "))
+#
+# n = sil.Silnia(liczba1)
+# k = sil.Silnia(liczba2)
+# n_odjac_k = sil.Silnia(liczba1 - liczba2)
+#
+# wynik = n / (k * n_odjac_k)
+#
+# print("Symbol newtona = {}".format(wynik))
 
 # ########################## Task 12
 # # Write a script to filter out only the even items from a list (i.e. made from range(1, 100))
@@ -349,18 +393,23 @@
 # ########################## Task 13
 #### Write a script, using reduce(), which will multiply elements in range (1, 100)
 
+# import functools
+# import operator
+# tablica=[]
+# lambd4 = lambda x, y: x * y
+# for liczba in range(1,100):
+#     tablica.append(liczba)
+# wynik = functools.reduce(lambd4, tablica)
+# print(wynik)
+
 # ########################## Task 14
 ### Write a program which will find all such numbers which are
 ### divisible by 7 but are not a multiple of 5 between 2000 and 3200 (both included)
 
-
-# ########################## Task 14
-### Write a program which will find all such numbers which are
-### divisible by 7 but are not a multiple of 5 between 2000 and 3200 (both included)
-
-# ########################## Task 15
-#  # # Utwórz funkcje Poziom: która rysuje gwiazdki poziomo, liczbę gwiazdek podaje użytkownik
-##### jako argument funkcji
-# # # Utwórz funkcje Pion: która rysuje gwiazdki pionowo,
-# ### liczbę gwiazdek podaje użytkownik jako argument funkcji')
-# # # Korzystając z w/w funkcji narysuj litery: E, L
+# wynik = []
+# for liczba in range(2000,3200):
+#     if liczba%7==0 and liczba%5!=0:
+#         wynik.append(liczba)
+#     else:
+#         continue
+# print(wynik)
