@@ -15,7 +15,7 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ## wywołasz tą funkcję w tekście minimum 3 krotnie
 ######################################################################################################################
 
-# import rozprawka
+# import Rozprawka
 #
 # def swiatynia_artemidy():
 #     print('Świątynia Artemidy – dla starożytnych Greków jeden z siedmiu cudów świata. Znana pod nazwą Artemizjonu stanowiła największą ozdobę Efezu w Azji Mniejszej (obecnie Turcja)')
