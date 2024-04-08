@@ -246,12 +246,17 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ## dowolnej branży o różnej liczbie pracowników. Program zapisuje do kolejnych list
 ## liczby produktów dostarczonych w danym dniu (nazwa listy odpowiada nazwie towaru)
 ## liczba towarów powinna być zapamiętana
-
-
-
 # Przetestuj swój program dla różnych przypadków dostawy towaru
 # Pamiętaj że asortyment sprzedawanego towaru ulega zmianie
 # Użyj kwargs
+
+# def dostarczone_artykuly(data = '' , **kwargs):
+#     for produkt, dostarczone in kwargs.items(): print(f"{data} - {produkt}: {dostarczone}")
+#
+# dostarczone_artykuly('03.04.2024', wafle = 200, mleko = 500, klej = 2000)
+# dostarczone_artykuly('04.03.2024', kawa = 200, ciastka = 100)
+
+
 # ########################## Zadanie 8
 ## W module pole_prostokata.py
 ## Zdefiniuj funkcję która obliczy pole powierzchni prostokąta
@@ -262,6 +267,16 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ## napisz funkcję która ma możliwość obliczenia pola prostokąta, trójkąta i kwadratu
 ## Użyj zmiennych globals, utwórz moduł globals.py w którym będą przechowywane
 ## domyślne wartości dla boków prostokąta, trójkąta, kwadratu (równe 1)
+
+
+# import pola
+    ### GLOBALS NIE DZIALA
+
+# opcja = int(input('Wybierz figure do obliczenia (1 = prostokat, 2 = trojkat, 3 = kwadrat): '))
+# pola.pola(opcja)
+
+
+
 # ########################## Zadanie 9
 ## Zdefiniuj funkcję wyższego rzędu która ma możliwość obliczenia
 ## pole powierzchni prostokąta i pola powierzchni trójkąta
