@@ -235,9 +235,11 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 #     print(liczba_pracownikow)
 #     print(kwargs)
 #
-# test_kwargs(1, mleko=100, woda=500)
-# print('#################')
-# test_kwargs(2, liczba_pracownikow = 15, drabina=500, cement=200)
+# def dostarczone_artykuly(data = '' , **kwargs):
+#     for produkt, dostarczone in kwargs.items(): print(f"{data} - {produkt}: {dostarczone}")
+#
+# dostarczone_artykuly('03.04.2024', wafle = 200, mleko = 500, klej = 2000)
+# dostarczone_artykuly('04.03.2024', kawa = 200, ciastka = 100)
 
 # ########################## Zadanie 7
 ## Zaprojektuj program służący do obsługi prostej bazy danych dla sklepu z
