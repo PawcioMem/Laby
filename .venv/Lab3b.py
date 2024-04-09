@@ -228,19 +228,6 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 # CiagGeometryczny.ciag_gometryczny(2,2,3)
 
 
-############Przykład
-### Mamy 2 sklepy  z różnymi produktami
-# def test_kwargs(id_sklep = 0, liczba_pracownikow = 5, **kwargs):
-#     print(id_sklep)
-#     print(liczba_pracownikow)
-#     print(kwargs)
-#
-# def dostarczone_artykuly(data = '' , **kwargs):
-#     for produkt, dostarczone in kwargs.items(): print(f"{data} - {produkt}: {dostarczone}")
-#
-# dostarczone_artykuly('03.04.2024', wafle = 200, mleko = 500, klej = 2000)
-# dostarczone_artykuly('04.03.2024', kawa = 200, ciastka = 100)
-
 # ########################## Zadanie 7
 ## Zaprojektuj program służący do obsługi prostej bazy danych dla sklepu z
 ## dowolnej branży o różnej liczbie pracowników. Program zapisuje do kolejnych list
