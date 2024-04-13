@@ -270,6 +270,33 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ## Nie modyfikując zawartości w/w funkcji, użyj dekoratora i dodaj możliwość
 ## obliczenia pola kwadratu
 
+# def pole_prostokata(a, b):
+#     return a * b
+#
+# def pole_trojkata(a, h):
+#     return (a * h)/2
+#
+# def oblicz(funkcja, *args):
+#     return funkcja(*args)
+#
+# def dekorator(funkcja):
+#     def obl_pola_kwadratu(*args):
+#         if len(args) == 1:
+#             return funkcja(args[0], args[0])  # a i b zamienia na ta sama wartosc
+#         else:
+#             print("Tylko jeden argument!!!!!")
+#     return obl_pola_kwadratu
+#
+# print("Pole prostokata:", oblicz(pole_prostokata, 5, 4))
+# print("Pole trojkata:", oblicz(pole_trojkata, 3, 6))
+#
+#                       #Chcialem zrobic zeby wykorzystac metode pole_prostokata i uzyc dekoratora ale nie dziala
+# @dekorator
+# def pole_kwadratu(a, b):
+#     return a * b
+#
+# print("Pole kwadratu:", pole_kwadratu(5))
+
 # ########################## Zadanie 10
 ## Utwórz funkcję która umożliwia logowanie na serwer
 ## Ma dwa argumenty wejściowe:
@@ -279,6 +306,42 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ## b) nie modyfikując zawartości w/w funkcji, użyj dekoratora i  daj możliwość
 ## wprowadzania dodatkowych innch pól użytkownikowi (wprowadzane jako słownik
 ##  np. {'data_base': 'https://pl.wikipedia.org'})
+
+# def login(user = 'edek2003', password = 'Wsx123'):
+#     print("Login:", user)
+#     print("Haslo:", password)
+#
+# def dekorator(funkcja):
+#     def wrapper(user='edek2003', password='Wsx123'):
+#         host = 'domyslny'
+#         port = 2003
+#         return funkcja(user, password, host, port)
+#     return wrapper
+#
+# @dekorator
+# def login_extra(user, password, host, port):
+#     print("Login:", user)
+#     print("Haslo:", password)
+#     print("Host:", host)
+#     print("Port:", port)
+#
+# login_extra()
+#
+# ## CZĘŚĆ B
+#
+# def dodatkowe_pola(funkcja):
+#     def wrapper(user='edek2003', password='Wsx123', **kwargs):
+#         return funkcja(user, password, **kwargs)
+#     return wrapper
+#
+#
+# @dodatkowe_pola
+# def login_dodatkowe_pola(user, password, **kwargs):
+#     print("Login:", user)
+#     print("Haslo:", password)
+#     print(kwargs)
+#
+# login_dodatkowe_pola(data_base = "https://pl.wikipedia.org")
 
 # ########################## Zadanie 11
 ## Zdefiniuj funkcję ciag_gometryczny, która dla podanych trzech parametrów:
@@ -290,7 +353,24 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ## Następnie korzystając z dekoratora udoskonal swoją funkcję,
 ## dodaj możliwość obliczenia sumy elementów ciągu geometrycznego
 
-
+# def ciag_geometryczny(n, a1=1, q=2):
+#     return a1 * (q ** (n - 1))
+#
+# print("N-ty wyraz ciagu geo:", ciag_geometryczny(5))
+#
+#
+# ## SUMA
+#
+# def dekorator(funkcja):
+#     def wrapper(n, a1=1, q=2):
+#         return a1 * ((1 - (q ** n)) / (1 - q))
+#     return wrapper
+#
+# @dekorator
+# def suma_elementow(n, a1=1, q=2):
+#     return n, a1, q
+#
+# print("Suma elementow ciagu geo:", suma_elementow(5, 2, 3))
 
 
 
