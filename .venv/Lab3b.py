@@ -272,29 +272,26 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 
 # def pole_prostokata(a, b):
 #     return a * b
-#
+# 
 # def pole_trojkata(a, h):
 #     return (a * h)/2
-#
+# 
 # def oblicz(funkcja, *args):
 #     return funkcja(*args)
-#
+# 
 # def dekorator(funkcja):
 #     def obl_pola_kwadratu(*args):
-#         if len(args) == 1:
-#             return funkcja(args[0], args[0])  # a i b zamienia na ta sama wartosc
-#         else:
-#             print("Tylko jeden argument!!!!!")
+#         return funkcja(args[0], args[0])  # a i b zamienia na ta sama wartosc
 #     return obl_pola_kwadratu
-#
+# 
 # print("Pole prostokata:", oblicz(pole_prostokata, 5, 4))
 # print("Pole trojkata:", oblicz(pole_trojkata, 3, 6))
-#
+# 
 #                       #Chcialem zrobic zeby wykorzystac metode pole_prostokata i uzyc dekoratora ale nie dziala
 # @dekorator
 # def pole_kwadratu(a, b):
 #     return a * b
-#
+# 
 # print("Pole kwadratu:", pole_kwadratu(5))
 
 # ########################## Zadanie 10
