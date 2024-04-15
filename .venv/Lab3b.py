@@ -8,6 +8,8 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ####################################################################################################################
 
 '''
+
+
 ##################################### Zadanie 0   na rozgrzewkę ##################
 ## Utwórz funkcję o nazwie "Rozprawka.py", która będzie wyświetlała,
 ## na ekranie napis "to poprostu jest wspaniałe i niesamowite, musisz to zobaczyć",
@@ -15,7 +17,7 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ## wywołasz tą funkcję w tekście minimum 3 krotnie
 ######################################################################################################################
 
-# import Rozprawka
+# import rozprawka
 #
 # def swiatynia_artemidy():
 #     print('Świątynia Artemidy – dla starożytnych Greków jeden z siedmiu cudów świata. Znana pod nazwą Artemizjonu stanowiła największą ozdobę Efezu w Azji Mniejszej (obecnie Turcja)')
@@ -149,7 +151,6 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 # print(potegi(4,5))
 
 
-
 ######### Zadanie 2
 ## Wczytaj poniższy fragment tekstu opisujący komputer
 ## Napisz funkcję która ustali liczbę występujących w tym tekście wyrazów wskazanych przez użytkownika
@@ -228,20 +229,33 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 # CiagGeometryczny.ciag_gometryczny(2,2,3)
 
 
+############Przykład
+### Mamy 2 sklepy  z różnymi produktami
+# def test_kwargs(id_sklep = 0, liczba_pracownikow = 5, **kwargs):
+#     print(id_sklep)
+#     print(liczba_pracownikow)
+#     print(kwargs)
+#
+# test_kwargs(1, mleko=100, woda=500)
+# print('#################')
+# test_kwargs(2, liczba_pracownikow = 15, drabina=500, cement=200)
+
 # ########################## Zadanie 7
 ## Zaprojektuj program służący do obsługi prostej bazy danych dla sklepu z
 ## dowolnej branży o różnej liczbie pracowników. Program zapisuje do kolejnych list
 ## liczby produktów dostarczonych w danym dniu (nazwa listy odpowiada nazwie towaru)
 ## liczba towarów powinna być zapamiętana
-# Przetestuj swój program dla różnych przypadków dostawy towaru
-# Pamiętaj że asortyment sprzedawanego towaru ulega zmianie
-# Użyj kwargs
 
 # def dostarczone_artykuly(data = '' , **kwargs):
 #     for produkt, dostarczone in kwargs.items(): print(f"{data} - {produkt}: {dostarczone}")
 #
 # dostarczone_artykuly('03.04.2024', wafle = 200, mleko = 500, klej = 2000)
 # dostarczone_artykuly('04.03.2024', kawa = 200, ciastka = 100)
+
+
+# Przetestuj swój program dla różnych przypadków dostawy towaru
+# Pamiętaj że asortyment sprzedawanego towaru ulega zmianie
+# Użyj kwargs
 
 
 # ########################## Zadanie 8
@@ -255,119 +269,93 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 ## Użyj zmiennych globals, utwórz moduł globals.py w którym będą przechowywane
 ## domyślne wartości dla boków prostokąta, trójkąta, kwadratu (równe 1)
 
-
 # import pola
 # import globals
-
+#
 # opcja = int(input('Wybierz figure do obliczenia (1 = prostokat, 2 = trojkat, 3 = kwadrat): '))
 # pola.pola(opcja)
 
 
-
-# ########################## Zadanie 9
-## Zdefiniuj funkcję wyższego rzędu która ma możliwość obliczenia
-## pole powierzchni prostokąta i pola powierzchni trójkąta
-## Nie modyfikując zawartości w/w funkcji, użyj dekoratora i dodaj możliwość
-## obliczenia pola kwadratu
+######################### Zadanie 9
+# Zdefiniuj funkcję wyższego rzędu która ma możliwość obliczenia
+# pole powierzchni prostokąta i pola powierzchni trójkąta
+# Nie modyfikując zawartości w/w funkcji, użyj dekoratora i dodaj możliwość
+# obliczenia pola kwadratu
 
 # def pole_prostokata(a, b):
 #     return a * b
-# 
+#
 # def pole_trojkata(a, h):
 #     return (a * h)/2
-# 
+#
 # def oblicz(funkcja, *args):
 #     return funkcja(*args)
-# 
+#
 # def dekorator(funkcja):
 #     def obl_pola_kwadratu(*args):
-#         return funkcja(args[0], args[0])  # a i b zamienia na ta sama wartosc
+#         return funkcja(args[0], args[0])  # a i b zamienia na ta sama wartosc pierwszego argumentu
 #     return obl_pola_kwadratu
-# 
+#
 # print("Pole prostokata:", oblicz(pole_prostokata, 5, 4))
 # print("Pole trojkata:", oblicz(pole_trojkata, 3, 6))
-# 
-#                       #Chcialem zrobic zeby wykorzystac metode pole_prostokata i uzyc dekoratora ale nie dziala
-# @dekorator
-# def pole_kwadratu(a, b):
+#
+# @dekorator                  #Dekorator spowoduje dzialanie (a * a) nie (a * b), a = 6 wiec wynik = 36
+# def pole_prostokata(a, b):
 #     return a * b
-# 
-# print("Pole kwadratu:", pole_kwadratu(5))
+#
+# print("Pole kwadratu:", pole_prostokata(6,7))
+
 
 # ########################## Zadanie 10
-## Utwórz funkcję która umożliwia logowanie na serwer
-## Ma dwa argumenty wejściowe:
-## user i password (domyślne wartości odpowiednio: 'edek2003', 'Wsx123')
-## a) nie modyfikując zawartości w/w funkcji, użyj dekoratora i dodaj dodatkowe
-## pola tj. host, port
-## b) nie modyfikując zawartości w/w funkcji, użyj dekoratora i  daj możliwość
-## wprowadzania dodatkowych innch pól użytkownikowi (wprowadzane jako słownik
-##  np. {'data_base': 'https://pl.wikipedia.org'})
+# Utwórz funkcję która umożliwia logowanie na serwer
+# Ma dwa argumenty wejściowe:
+# user i password (domyślne wartości odpowiednio: 'edek2003', 'Wsx123')
+# a) nie modyfikując zawartości w/w funkcji, użyj dekoratora i dodaj dodatkowe
+# pola tj. host, port
+# b) nie modyfikując zawartości w/w funkcji, użyj dekoratora i  daj możliwość
+# wprowadzania dodatkowych innch pól użytkownikowi (wprowadzane jako słownik
+#  np. {'data_base': 'https://pl.wikipedia.org'})
 
-# def login(user = 'edek2003', password = 'Wsx123'):
-#     print("Login:", user)
-#     print("Haslo:", password)
-#
-# def dekorator(funkcja):
-#     def wrapper(user='edek2003', password='Wsx123'):
-#         host = 'domyslny'
-#         port = 2003
-#         return funkcja(user, password, host, port)
-#     return wrapper
+# def dekorator(func, **kwargs):              #Z wykladu
+#     def edit(user,password,**kwargs):
+#         func_connect = func(user,password)
+#         func_connect.update(kwargs)
+#         print(func_connect)
+#     return edit
 #
 # @dekorator
-# def login_extra(user, password, host, port):
-#     print("Login:", user)
-#     print("Haslo:", password)
-#     print("Host:", host)
-#     print("Port:", port)
+# def log(user = 'edek2003',password = 'Wsx123'):
+#     s={'User': user, 'Password': password}
+#     return s
 #
-# login_extra()
-#
-# ## CZĘŚĆ B
-#
-# def dodatkowe_pola(funkcja):
-#     def wrapper(user='edek2003', password='Wsx123', **kwargs):
-#         return funkcja(user, password, **kwargs)
-#     return wrapper
-#
-#
-# @dodatkowe_pola
-# def login_dodatkowe_pola(user, password, **kwargs):
-#     print("Login:", user)
-#     print("Haslo:", password)
-#     print(kwargs)
-#
-# login_dodatkowe_pola(data_base = "https://pl.wikipedia.org")
+# log('edek2003', 'Wsx123', host='localhost', port=7643, data_base="https://pl.wikipedia.org")
+
 
 # ########################## Zadanie 11
-## Zdefiniuj funkcję ciag_gometryczny, która dla podanych trzech parametrów:
-## n=numer elementu ciągu, a1=wartość pierwszego elementu ciągu (domyślnie: 1),
-## q=wartość iloczynu ciągu geometrycznego (domyślnie: 2)
-## zwróci w zależności od ustawianych parametrów funkcji
-## a) wartość n-tego elementu ciągu geometrycznego
+# Zdefiniuj funkcję ciag_gometryczny, która dla podanych trzech parametrów:
+# n=numer elementu ciągu, a1=wartość pierwszego elementu ciągu (domyślnie: 1),
+# q=wartość iloczynu ciągu geometrycznego (domyślnie: 2)
+# zwróci w zależności od ustawianych parametrów funkcji
+# a) wartość n-tego elementu ciągu geometrycznego
+# Następnie korzystając z dekoratora udoskonal swoją funkcję,
+# dodaj możliwość obliczenia sumy elementów ciągu geometrycznego
 
-## Następnie korzystając z dekoratora udoskonal swoją funkcję,
-## dodaj możliwość obliczenia sumy elementów ciągu geometrycznego
 
 # def ciag_geometryczny(n, a1=1, q=2):
 #     return a1 * (q ** (n - 1))
-#
-# print("N-ty wyraz ciagu geo:", ciag_geometryczny(5))
-#
-#
+# 
+# print("N-ty wyraz ciągu geo:", ciag_geometryczny(5))
+# 
+# 
 # ## SUMA
-#
+# 
 # def dekorator(funkcja):
-#     def wrapper(n, a1=1, q=2):
-#         return a1 * ((1 - (q ** n)) / (1 - q))
-#     return wrapper
-#
+#     def dek_suma(n, a1=1, q=2):
+#         return a1 * ((1 - (q ** n)) / (1 - q))                  ##Wzor na sume elementow ciagu
+#     return dek_suma
+# 
 # @dekorator
 # def suma_elementow(n, a1=1, q=2):
-#     return n, a1, q
-#
-# print("Suma elementow ciagu geo:", suma_elementow(5, 2, 3))
-
-
-
+#     print("bla bla bla to jest niewazne poniewaz dekorator wszystko zmieni :)")
+# 
+# print("Suma elementów ciągu geo:", suma_elementow(4, 2, 3))
