@@ -257,7 +257,7 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 
 
 # import pola
-    ### GLOBALS NIE DZIALA
+# import globals
 
 # opcja = int(input('Wybierz figure do obliczenia (1 = prostokat, 2 = trojkat, 3 = kwadrat): '))
 # pola.pola(opcja)
