@@ -292,9 +292,9 @@ Dodatkowe linki do filmów, które ułatwią Ci zrozumienie materiału z laborat
 #     return funkcja(*args)
 #
 # def dekorator(funkcja):
-#     def obl_pola_kwadratu(*args):
+#     def pole_kwadratu(*args):
 #         return funkcja(args[0], args[0])  # a i b zamienia na ta sama wartosc pierwszego argumentu
-#     return obl_pola_kwadratu
+#     return pole_kwadratu
 #
 # print("Pole prostokata:", oblicz(pole_prostokata, 5, 4))
 # print("Pole trojkata:", oblicz(pole_trojkata, 3, 6))
