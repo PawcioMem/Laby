@@ -1,2 +1,0 @@
-CONST_A = 2
-CONST_B = 5
